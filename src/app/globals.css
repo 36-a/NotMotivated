@@ -2,27 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
+@layer base {
+    h1 {
+        @apply font-bold text-xl;
     }
-}
-
-body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
+    h2 {
+        @apply font-bold text-lg;
+    }
+    h3 {
+        @apply font-bold text-base;
+    }
+    p {
+        @apply mx-0 mt-8r mb-8r;
+    }
+    ul {
+        @apply pl-[1.875rem];
+    }
+    li {
+        @apply list-none ml-[-1.375rem];
+    }
+    table {
+        @apply border-collapse border-solid border-[0.5px] border-[dimgray];
+    }
+    th {
+        @apply border-collapse border-solid border-[0.5px] border-[dimgray] font-bold px-5 pt-5 pb-5;
+    }
+    td {
+        @apply border-collapse border-solid border-[0.5px] border-[dimgray] px-5 pt-5 pb-5;
+    }
+    a {
+        @apply text-link hover:text-link;
+    }
+    pre {
+        @apply bg-code px-[1.25rem] pt-[12px] pb-[12px] max-h-[250px] rounded-md overflow-x-scroll overscroll-y-contain;
+    }
+    code {
+        @apply bg-code px-[0.125rem] pt-[0.31rem] pb-[0.31rem];
     }
 }
