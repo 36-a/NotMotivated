@@ -21,7 +21,7 @@
         ],
         "baseUrl": "src",
         "paths": {
-            "app/*": ["./app"],
+            "utils/*": ["./app/_utils/*"],
             "ui/*": ["./app/*/_components/ui"],
             "logic/*": ["./app/*/_components/logic"],
         },
