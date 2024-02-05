@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import tailwindConfig from '../../tailwind.config';
+
+<Meta title="Colors" />
+
+export const colors = tailwindConfig.theme.colors;
+
+<ColorPalette>
+    <ColorItem title='main' colors={{ main: colors.main }} />
+    <ColorItem title='light_theme' colors={ colors.light } />
+    <ColorItem title='dark_theme' colors={ colors.dark } />
+    <ColorItem title='other' colors={{ danger: colors.danger }} />
+</ColorPalette>

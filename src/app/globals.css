@@ -13,7 +13,7 @@
         @apply font-bold text-base;
     }
     p {
-        @apply mx-0 mt-8r mb-8r;
+        @apply mx-0 my-8r;
     }
     ul {
         @apply pl-[1.875rem];
@@ -25,18 +25,18 @@
         @apply border-collapse border-solid border-[0.5px] border-[dimgray];
     }
     th {
-        @apply border-collapse border-solid border-[0.5px] border-[dimgray] font-bold px-5 pt-5 pb-5;
+        @apply border-collapse border-solid border-[0.5px] border-[dimgray] font-bold px-5 py-5;
     }
     td {
-        @apply border-collapse border-solid border-[0.5px] border-[dimgray] px-5 pt-5 pb-5;
+        @apply border-collapse border-solid border-[0.5px] border-[dimgray] px-5 py-5;
     }
     a {
-        @apply text-link hover:text-link;
+        @apply text-light-link dark:text-dark-link hover:text-light-link;
     }
     pre {
-        @apply bg-code px-[1.25rem] pt-[12px] pb-[12px] max-h-[250px] rounded-md overflow-x-scroll overscroll-y-contain;
+        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[1.25rem] py-[12px] max-h-[250px] rounded-md overflow-x-scroll overscroll-y-contain;
     }
     code {
-        @apply bg-code px-[0.125rem] pt-[0.31rem] pb-[0.31rem];
+        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[0.125rem] py-[0.31rem];
     }
 }

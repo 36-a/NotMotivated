@@ -1,21 +1,36 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-    content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+    content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.stories.{js,ts,jsx,tsx,mdx}'],
     darkMode: 'class',
     theme: {
         colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
             main: '#7288CC',
+            light: {
+                text: '#28292B',
+                bg: '#F7F8FD',
+                link: '#428DD9',
+                'code-bg': '#EAF4F7',
+                code: '#28292B',
+            },
+            dark: {
+                text: '#F7F8FD',
+                bg: '#545D7B',
+                link: '#428DD9',
+                'code-bg': '#EAF4F7',
+                code: '#28292B',
+            },
             darkened: '#545D7B',
-            white: '#F7F8FD',
-            black: '#28292B',
-            link: '#428DD9',
-            code: '#eaf4f7',
+            danger: '#C32727',
         },
         screens: {
+            xs: '430px',
             sm: '600px',
             md: '768px',
-            lg: '1280px',
+            lg: '1024px',
+            xl: '1280px',
         },
         spacing: {
             '0': '0',
