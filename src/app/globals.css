@@ -31,12 +31,12 @@
         @apply border-collapse border-solid border-[0.5px] border-[dimgray] px-5 py-5;
     }
     a {
-        @apply text-light-link dark:text-dark-link hover:text-light-link;
+        @apply text-link hover:text-link;
     }
     pre {
-        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[1.25rem] py-[12px] max-h-[250px] rounded-md overflow-x-scroll overscroll-y-contain;
+        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[1.175rem] py-[12px] max-h-[250px] rounded-md overflow-x-auto overscroll-y-contain;
     }
     code {
-        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[0.125rem] py-[0.31rem];
+        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[0.175rem] py-[0.31rem] rounded-md [pre_&]:p-0;
     }
 }

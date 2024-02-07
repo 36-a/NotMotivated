@@ -1,6 +1,10 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import { Toggle } from './Toggle';
 
+/**
+ * 色がわかりにくいため背景色をつけている<br>
+ * https://storybook.js.org/docs/writing-stories/decorators
+ */
 const meta: Meta<typeof Toggle> = {
     title: 'utils/Toggle',
     component: Toggle,
@@ -11,7 +15,6 @@ const meta: Meta<typeof Toggle> = {
     },
     decorators: [
         Story => (
-            /** 色がわかりにくいため背景色をつけている */
             <div
                 style={{
                     backgroundColor: '#7288CC',
