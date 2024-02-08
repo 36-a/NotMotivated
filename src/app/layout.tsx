@@ -1,6 +1,7 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import type { Metadata } from 'next';
+import { Provider } from './Provider';
 import './globals.css';
 import { Font } from 'utils/Font';
 import { Header } from 'utils/components/header/Header';
@@ -19,11 +20,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ja">
+        <html
+            lang="ja"
+            suppressHydrationWarning
+        >
             {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access */}
-            <body className={`${Font.variable} bg-light-bg font-sans dark:bg-dark-bg`}>
-                <Header />
-                {children}
+            <body className={`${Font.variable} font-sans`}>
+                <Provider
+                    attribute="class"
+                    defaultTheme="light"
+                >
+                    <Header />
+                    {children}
+                </Provider>
                 <SpeedInsights />
             </body>
         </html>

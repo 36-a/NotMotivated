@@ -1,14 +1,19 @@
 interface ButtonProps {
     label: string;
-    onClick?: React.MouseEventHandler<HTMLElement>;
+    mode: 'primary' | 'secondary';
+    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-export const PrimaryButton = ({ label, ...props }: ButtonProps) => {
+export const Button = ({ label, mode, onClick }: ButtonProps) => {
+    const classes = {
+        primary: 'bg-main text-white',
+        secondary: 'bg-darkened text-white dark:border-2',
+    };
     return (
         <button
             type="button"
-            className="h-[50px] bg-main px-10 text-center text-dark-text"
-            {...props}
+            className={`${classes[mode]} h-[50px] rounded-md px-10 text-center`}
+            onClick={onClick}
         >
             {label}
         </button>

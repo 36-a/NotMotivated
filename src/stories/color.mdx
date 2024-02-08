@@ -7,8 +7,17 @@ export const colors = tailwindConfig.theme.colors;
 
 <ColorPalette>
     <ColorItem title='main' colors={{ main: colors.main }} />
-    <ColorItem title='light_theme' colors={ colors.light } />
-    <ColorItem title='dark_theme' colors={ colors.dark } />
-    <ColorItem title='link' colors={{ link: colors.link }} />
-    <ColorItem title='other' colors={{ danger: colors.danger }} />
+    <ColorItem title='light_theme' colors={{
+        bg: colors.white,
+        text: colors.black,
+        code_bg: '#EAF4F7',
+        code_text: colors.black,
+    }} />
+    <ColorItem title='dark_theme' colors={{
+        bg: colors.darkened,
+        text: colors.white,
+        code_bg: '#3E4355',
+        code_text: colors.white,
+    }} />
+    <ColorItem title='other' colors={{ danger: colors.danger, link: colors.link, check: '#7fffd4', }} />
 </ColorPalette>

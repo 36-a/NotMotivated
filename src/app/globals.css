@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --background: #f7f8fd;
+    --foreground: #28292b;
+    --code-bg: #eaf4f7;
+    --code-text: #28292b;
+}
+
+.dark {
+    --background: #545d7b;
+    --foreground: #f7f8fd;
+    --code-bg: #3e4355;
+    --code-text: #f7f8fd;
+}
+
 @layer base {
+    body {
+        @apply bg-background text-foreground text-base;
+    }
     h1 {
         @apply font-bold text-xl;
     }
@@ -34,9 +51,15 @@
         @apply text-link hover:text-link;
     }
     pre {
-        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[1.175rem] py-[12px] max-h-[250px] rounded-md overflow-x-auto overscroll-y-contain;
+        @apply bg-code-bg text-code px-[1.175rem] py-[12px] max-h-[250px] rounded-md overflow-x-auto overscroll-y-contain;
     }
     code {
-        @apply bg-light-code-bg dark:bg-dark-code-bg text-light-code dark:text-dark-code px-[0.175rem] py-[0.31rem] rounded-md [pre_&]:p-0;
+        @apply bg-code-bg text-code px-[0.175rem] py-[0.31rem] rounded-md [pre_&]:p-0;
+    }
+}
+
+@layer components {
+    .flex-center {
+        @apply flex justify-center items-center;
     }
 }

@@ -1,7 +1,23 @@
+'use client';
+
+import { ReportIconButton } from './_components/button/ReportIconButton';
+import { TodoIconButton } from './_components/button/TodoIconButton';
+
 export default function Home() {
     return (
-        <main className="mx-auto mt-[15px] max-w-[80%]">
-            <h1 className="text-light-text dark:text-dark-text">Hello World!!</h1>
+        <main>
+            <div className="flex-center mt-[30vh] gap-10">
+                <ReportIconButton
+                    onClick={() => {
+                        console.log('Report clicked!');
+                    }}
+                />
+                <TodoIconButton
+                    onClick={() => {
+                        console.log('Todo clicked!');
+                    }}
+                />
+            </div>
         </main>
     );
 }

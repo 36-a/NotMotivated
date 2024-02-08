@@ -1,27 +1,14 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export const useDisplayMode = () => {
     const [isDark, setIsDark] = useState(false);
-    useEffect(() => {
-        setIsDark(
-            localStorage.theme === 'dark' ||
-                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
-        );
-    }, []);
+    const { theme, setTheme } = useTheme();
 
     const changeMode = useCallback(() => {
         setIsDark(prevIsDark => !prevIsDark);
-    }, []);
-
-    useEffect(() => {
-        if (isDark) {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.theme = 'light';
-        }
-    }, [isDark]);
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    }, [theme, setTheme]);
 
     return { isDark, changeMode };
 };

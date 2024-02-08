@@ -11,18 +11,12 @@ const config: Config = {
             link: '#428DD9',
             danger: '#C32727',
             darkened: '#545D7B',
-            light: {
-                bg: '#F7F8FD',
-                text: '#28292B',
-                'code-bg': '#EAF4F7',
-                code: '#28292B',
-            },
-            dark: {
-                bg: '#545D7B',
-                text: '#F7F8FD',
-                'code-bg': '#3E4355',
-                code: '#F7F8FD',
-            },
+            black: '#28292B',
+            white: '#F7F8FD',
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            'code-bg': 'var(--code-bg)',
+            code: 'var(--code-text)',
         },
         screens: {
             xs: '430px',
@@ -49,7 +43,7 @@ const config: Config = {
         fontSize: {
             xs: ['0.625rem', { lineHeight: '1rem' }], //10px
             sm: ['0.75rem', { lineHeight: '1rem' }], // 12px
-            base: ['0.875rem', { lineHeight: '1rem' }], // 14px
+            base: ['0.875rem', { lineHeight: '1.2rem' }], // 14px
             lg: ['1rem', { lineHeight: '1.25rem' }], // 16px
             xl: ['1.125rem', { lineHeight: '1.25rem' }], // 18px
         },

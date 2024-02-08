@@ -39,9 +39,6 @@ const Pre = ({ example }: Props) => {
 const meta: Meta<typeof Pre> = {
     title: 'Example/Pre',
     component: Pre,
-    parameters: {
-        layout: 'centered',
-    },
     decorators: [
         Story => (
             <div
@@ -53,6 +50,13 @@ const meta: Meta<typeof Pre> = {
             </div>
         ),
     ],
+    parameters: {
+        docs: {
+            source: {
+                type: 'null',
+            },
+        },
+    },
 };
 
 const Template: StoryFn<typeof Pre> = args => <Pre {...args} />;

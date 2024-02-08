@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 
 interface Props {
     example: string;
@@ -10,18 +10,21 @@ const Code = ({ example }: Props) => {
 const meta: Meta<typeof Code> = {
     title: 'Example/Code',
     component: Code,
-    parameters: {
-        layout: 'centered',
-    },
     argTypes: {
         example: {
             control: 'text',
         },
     },
+    parameters: {
+        docs: {
+            source: {
+                code: null,
+            },
+        },
+    },
 };
 
 const Template: StoryFn<typeof Code> = args => <Code {...args} />;
-
 export const ExampleCode = Template.bind({});
 ExampleCode.args = {
     example: 'code span の表示',
