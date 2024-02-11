@@ -9,10 +9,16 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": ["./tsconfig.json", "public/mockServiceWorker.js"]
     },
     "plugins": ["unused-imports"],
     "rules": {
-        "unused-imports/no-unused-imports": "error"
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/no-floating-promises": [
+            "warn",
+            {
+                "ignoreIIFE": true
+            }
+        ]
     }
 }

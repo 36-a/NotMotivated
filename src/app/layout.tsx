@@ -1,7 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import type { Metadata } from 'next';
-import { Provider } from './Provider';
 import './globals.css';
 import { Font } from 'utils/Font';
 import { Header } from 'utils/components/header/Header';
@@ -22,17 +21,12 @@ export default function RootLayout({
     return (
         <html
             lang="ja"
-            suppressHydrationWarning
+            // suppressHydrationWarning
         >
             {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access */}
             <body className={`${Font.variable} font-sans`}>
-                <Provider
-                    attribute="class"
-                    defaultTheme="light"
-                >
-                    <Header />
-                    {children}
-                </Provider>
+                <Header />
+                <main className="mx-auto mt-[15px] min-w-[360px] max-w-[80%]">{children}</main>
                 <SpeedInsights />
             </body>
         </html>

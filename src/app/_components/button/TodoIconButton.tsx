@@ -6,6 +6,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export const TodoIconButton = ({ onClick }: { onClick: React.MouseEventHandler<HTMLElement> }) => {
     return (
         <ButtonWrapper onClick={onClick}>
+            {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
             <div className="fa-stack flex size-[116px] flex-col items-center justify-between">
                 <FontAwesomeIcon
                     icon={faNoteSticky}
@@ -13,6 +14,7 @@ export const TodoIconButton = ({ onClick }: { onClick: React.MouseEventHandler<H
                 />
                 <FontAwesomeIcon
                     icon={faCheck}
+                    /* eslint-disable-next-line tailwindcss/no-custom-classname */
                     className="fa-stack-2x top-[-0.8rem] text-[#7fffd4]"
                 />
                 <span className="text-sm font-bold text-background">TODO Tasks</span>

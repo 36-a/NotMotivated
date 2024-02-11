@@ -4,7 +4,7 @@ export default create({
     base: 'light',
     brandTitle: 'Not Motivated',
     brandUrl: 'https://not-motivated.vercel.app/',
-    brandImage: '/icon.png',
+    brandImage: './icon.png',
     brandTarget: '_self',
 
     colorSecondary: '#7288CC',

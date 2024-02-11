@@ -21,11 +21,12 @@
         ],
         "baseUrl": "src",
         "paths": {
+            "mock/*": ["./mock/*"],
             "utils/*": ["./app/_utils/*"],
             "ui/*": ["./app/*/_components/ui"],
             "logic/*": ["./app/*/_components/logic"],
         },
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "public/mockServiceWorker.js"],
     "exclude": ["node_modules"],
 }
